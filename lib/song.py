@@ -1,11 +1,11 @@
 
 class Song:
-    # Class attributes shared by all songs
     count = 0
     genres = []
     artists = []
     genre_count = {}
     artist_count = {}
+    artists_count = artist_count
 
     def __init__(self, name, artist, genre):
         self.name = name
@@ -43,5 +43,7 @@ class Song:
         if artist not in cls.artist_count:
             cls.artist_count[artist] = 0
         cls.artist_count[artist] += 1
+ 
+
 
 
